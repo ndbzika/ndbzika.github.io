@@ -1,9 +1,9 @@
 import { Avatar, Box, Container, Typography } from '@mui/material';
-import { Carousel } from 'bootstrap';
 import React from 'react';
 import Carrosel from '../components/Carousel';
 
 import Header from '../components/Header';
+import Contacts from '../components/Contacts';
 
 import '../styles/Principal.css'
 import '../styles/bootstrap/bootstrap.css'
@@ -42,7 +42,9 @@ export const Home = () => {
             </Container>
         </section>
         <section className='contatos-container'>
-            
+            <Container>
+                <Contacts/>
+            </Container>
         </section>
         </>
     );

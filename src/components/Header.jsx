@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { AppBar, Avatar, Box, Container, Menu, MenuItem, Toolbar, Typography, Button } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
+import { AppBar, Box, Container, Menu, MenuItem, Toolbar, Typography, Button } from '@mui/material';
 
 const Header = () => {
     const pages = ['Sobre Mim', 'Projetos', 'Contato'];
