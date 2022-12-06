@@ -1,0 +1,20 @@
+body {
+  background-color: deepskyblue;
+}
+body .principal {
+  background-image: url("../images/background-image.png");
+  height: 100vh;
+}
+body .about-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .about-me-container .about-me-titulo {
+  color: #0d214f;
+}
+body .about-me-container .about-me-texto {
+  color: #0d214f;
+  width: 800px;
+  margin: 0 auto;
+}/*# sourceMappingURL=Principal.css.map */

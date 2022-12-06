@@ -1,10 +1,12 @@
 import React from 'react';
 
 import { AppBar, Avatar, Box, Container, Menu, MenuItem, Toolbar, Typography, Button } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+
 const Header = () => {
     const pages = ['Sobre Mim', 'Projetos', 'Contato'];
     return (  
-        <AppBar position='static'>
+        <AppBar position='static' color='default'>
             <Container maxWidth='xl'>
                 <Toolbar disableGutters>
                 <Typography
@@ -18,6 +20,7 @@ const Header = () => {
                         fontWeight: 700,
                         color: 'inherit',
                         textDecoration: 'none',
+                        flexGrow:1
                         }}
                     >
                         Meu Portifólio
@@ -39,20 +42,16 @@ const Header = () => {
                         </Menu>
                     </Box>
                     
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'blue', display: 'block' }}
                             >
                                 {page}
                             </Button>
                         ))}
                     </Box>
-
-
-                    <Box sx={{ flexGrow:0}}>
-                        <Avatar alt='flavio' src='./images/bcbcvb.png'/>
-                    </Box>
+                    
                 </Toolbar>
             </Container>
         </AppBar>

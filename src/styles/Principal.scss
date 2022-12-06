@@ -1,0 +1,22 @@
+body{
+    background-color: deepskyblue;
+
+    .principal{
+        background-image: url('../images/background-image.png');
+        height: 100vh;
+    }
+    .about-me-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .about-me-titulo{
+            color: #0d214f;
+        }
+        .about-me-texto{
+            color: #0d214f;
+            width: 800px;
+            margin: 0 auto;
+        }
+    }
+}
