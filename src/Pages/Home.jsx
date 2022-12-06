@@ -1,9 +1,13 @@
 import { Avatar, Box, Container, Typography } from '@mui/material';
+import { Carousel } from 'bootstrap';
 import React from 'react';
+import Carrosel from '../components/Carousel';
 
 import Header from '../components/Header';
 
 import '../styles/Principal.css'
+import '../styles/bootstrap/bootstrap.css'
+
 
 export const Home = () => {
     return (  
@@ -27,11 +31,18 @@ export const Home = () => {
                 &nbsp;
             </Box>
         </section>
+        &nbsp;
+        &nbsp;
+        &nbsp;
         <section className='projetos-container'>
-
+        &nbsp;
+            <Typography variant='h2' component='h2' sx={{color: '#0d214f', textAlign:'center'}}>Projetos</Typography>
+            <Container>
+                <Carrosel/>
+            </Container>
         </section>
         <section className='contatos-container'>
-
+            
         </section>
         </>
     );
