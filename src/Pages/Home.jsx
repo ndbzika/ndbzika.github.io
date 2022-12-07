@@ -12,7 +12,7 @@ import '../styles/bootstrap/bootstrap.css'
 export const Home = () => {
     return (  
         <>
-        <section className='principal'>
+        <section className='principal' id='sobre-mim'>
             <Header /> 
             <Container sx={{ padding:10, display:'flex',gap:10, alignItems:'center'}}>
                 <Avatar alt='Flávio Henrique' src="https://thumbs2.imgbox.com/90/b9/0HtrPDN8_t.png" sx={{ width: 400, height: 400, flexGrow:0 }}/>
@@ -34,7 +34,7 @@ export const Home = () => {
         &nbsp;
         &nbsp;
         &nbsp;
-        <section className='projetos-container' style={{backgroundColor:'#0d214f', height:'80vh', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+        <section className='projetos-container' id='projetos' style={{backgroundColor:'#0d214f', height:'80vh', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
             &nbsp;
             <Typography variant='h2' component='h2' sx={{color: 'white', textAlign:'center', fontWeight:'bold'}}>Projetos</Typography>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -45,7 +45,7 @@ export const Home = () => {
             &nbsp;
             &nbsp;
         </section>
-        <section className='contatos-container' style={{ height:'40vh', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+        <section className='contatos-container' id='contatos' style={{ height:'40vh', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
             <Container sx={{display:'flex', flexDirection:'column', gap:2, justifyContent:'center'}}>
                 <Typography variant='h3' component='div' sx={{color:'#0d214f', fontWeight:'bold', textAlign:'center'}}>Contatos</Typography>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

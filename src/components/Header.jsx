@@ -16,7 +16,6 @@ const Header = () => {
         setAnchorElNav(null);
     };
 
-
     return (  
         <AppBar position='static' color='default'>
             <Container maxWidth='xl'>
@@ -77,13 +76,30 @@ const Header = () => {
                     </Box>
                     
                     <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
                             <Button
                                 sx={{ my: 2, color: 'blue', display: 'block' }}
+                                href='#sobre-mim'
                             >
-                                {page}
+                                Sobre Mim
                             </Button>
-                        ))}
+                    </Box>
+
+                    <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+                            <Button
+                                sx={{ my: 2, color: 'blue', display: 'block' }}
+                                href='#projetos'
+                            >
+                                Projetos
+                            </Button>
+                    </Box>
+
+                    <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+                            <Button
+                                sx={{ my: 2, color: 'blue', display: 'block' }}
+                                href='#contatos'
+                            >
+                                Contatos
+                            </Button>
                     </Box>
                     
                 </Toolbar>
