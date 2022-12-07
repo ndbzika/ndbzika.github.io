@@ -3,6 +3,7 @@ import React from 'react';
 
 import Header from '../components/Header';
 import Contacts from '../components/Contacts';
+import ProjectsSection from '../components/Projects';
 
 import '../styles/Principal.css'
 import '../styles/bootstrap/bootstrap.css'
@@ -34,10 +35,10 @@ export const Home = () => {
         &nbsp;
         &nbsp;
         <section className='projetos-container'>
-        &nbsp;
+            &nbsp;
             <Typography variant='h2' component='h2' sx={{color: '#0d214f', textAlign:'center'}}>Projetos</Typography>
-            <Container>
-                
+            <Container sx={{display:'flex', flexDirection:'row', textAlign:'center', gap:5}}>
+                <ProjectsSection/>
             </Container>
         </section>
         <section className='contatos-container'>
