@@ -1,6 +1,5 @@
 import { Avatar, Box, Container, Typography } from '@mui/material';
 import React from 'react';
-import Carrosel from '../components/Carousel';
 
 import Header from '../components/Header';
 import Contacts from '../components/Contacts';
@@ -38,7 +37,7 @@ export const Home = () => {
         &nbsp;
             <Typography variant='h2' component='h2' sx={{color: '#0d214f', textAlign:'center'}}>Projetos</Typography>
             <Container>
-                <Carrosel/>
+                
             </Container>
         </section>
         <section className='contatos-container'>
