@@ -1,9 +1,22 @@
 import React from 'react';
 
-import { AppBar, Box, Container, Menu, MenuItem, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Box, Container, Menu, MenuItem, Toolbar, Typography, Button, IconButton } from '@mui/material';
+import { HiMenu } from 'react-icons/hi'
 
 const Header = () => {
     const pages = ['Sobre Mim', 'Projetos', 'Contato'];
+
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
+
+
     return (  
         <AppBar position='static' color='default'>
             <Container maxWidth='xl'>
@@ -12,6 +25,7 @@ const Header = () => {
                         variant="h6"
                         noWrap
                         component="a"
+                        href="/"
                         sx={{
                         mr: 2,
                         display: { xs: 'none', md: 'flex' },
@@ -26,15 +40,36 @@ const Header = () => {
                     </Typography>
 
                     <Box sx={{flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit"
+                        >
+                            <HiMenu/>
+                        </IconButton>
                         <Menu
                         id="menu-appbar"
+                        anchorEl={anchorElNav}
                         keepMounted
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
                         sx={{
                             display: { xs: 'block', md: 'none' },
                         }}
                         >
                             {pages.map((page) => (
-                                <MenuItem>
+                                <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
