@@ -12,7 +12,7 @@ import '../styles/bootstrap/bootstrap.css'
 export const Home = () => {
     return (  
         <>
-        <section className='principal' id='sobre-mim'>
+        <section className='principal'>
             <Header /> 
             <Container sx={{ padding:10, display:'flex',gap:10, alignItems:'center'}}>
                 <Avatar alt='Flávio Henrique' src="https://thumbs2.imgbox.com/90/b9/0HtrPDN8_t.png" sx={{ width: 400, height: 400, flexGrow:0 }}/>
@@ -23,7 +23,7 @@ export const Home = () => {
             </Container>
         </section>
 
-        <section className='about-me-container' id='about-me'>
+        <section className='about-me-container' id='sobre-mim'>
             <Box maxWidth='xl' sx={{width:'100%', height:350, backgroundColor:'white'}}>
                 &nbsp;
                 <Typography variant='h2' component='div' textAlign='center' className='about-me-titulo' sx={{ fontWeight:'bold'}}>Quem é Flávio?</Typography>
