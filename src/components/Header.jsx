@@ -4,7 +4,6 @@ import { AppBar, Box, Container, Menu, MenuItem, Toolbar, Typography, Button, Ic
 import { HiMenu } from 'react-icons/hi'
 
 const Header = () => {
-    const pages = ['Sobre Mim', 'Projetos', 'Contato'];
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -67,14 +66,32 @@ const Header = () => {
                             display: { xs: 'block', md: 'none' },
                         }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
+                                <a href="#sobre-mim" style={{textDecoration:'none', color:"black"}}>
+                                    <MenuItem key={'sobre-mim'} onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">Sobre Mim</Typography>
+                                    </MenuItem>
+                                </a>
+
+                                <a href="#projetos" style={{textDecoration:'none', color:"black"}}>
+                                    <MenuItem key={'projetos'} onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">Projetos</Typography>
+                                    </MenuItem>
+                                </a>
+
+                                <a href="#contatos" style={{textDecoration:'none', color:"black"}}>
+                                    <MenuItem key={'contatos'} onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">Contatos</Typography>
+                                    </MenuItem>
+                                </a>
+
                         </Menu>
                     </Box>
                     
+
+
+
+
+                    {/* //////////////////////////////// */}
                     <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
                             <Button
                                 sx={{ my: 2, color: 'blue', display: 'block' }}
