@@ -34,12 +34,16 @@ export const Home = () => {
         &nbsp;
         &nbsp;
         &nbsp;
-        <section className='projetos-container'>
+        <section className='projetos-container' style={{backgroundColor:'#0d214f', height:'80vh', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
             &nbsp;
-            <Typography variant='h2' component='h2' sx={{color: '#0d214f', textAlign:'center'}}>Projetos</Typography>
-            <Container sx={{display:'flex', flexDirection:'row', textAlign:'center', gap:5}}>
-                <ProjectsSection/>
+            <Typography variant='h2' component='h2' sx={{color: 'white', textAlign:'center'}}>Projetos</Typography>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Container sx={{display:'flex', flexDirection:'row', justifyContent:'center', gap:5}}>
+                <ProjectsSection />
             </Container>
+            &nbsp;
+            &nbsp;
+            &nbsp;
         </section>
         <section className='contatos-container'>
             <Container>
