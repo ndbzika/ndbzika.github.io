@@ -38,7 +38,7 @@ export const Home = () => {
             &nbsp;
             <Typography variant='h2' component='h2' sx={{color: 'white', textAlign:'center', fontWeight:'bold'}}>Projetos</Typography>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Container sx={{display:'flex', flexDirection:'row', justifyContent:'center', gap:5}}>
+            <Container style={{minWidth:400, display:'flex'}}>
                 <ProjectsSection />
             </Container>
             &nbsp;
