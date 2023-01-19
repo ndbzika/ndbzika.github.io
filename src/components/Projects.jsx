@@ -9,9 +9,8 @@ const ProjectsSection = () => {
     const carousel = useRef();
 
     useEffect(() => {
-        console.log(carousel.current?.scrollWidth , carousel.current?.offsetWidth);
         setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
-    },[])
+    },[carousel.current?.scrollWidth])
 
     useEffect(() => {
         fetch('https://api.github.com/users/ndbzika/repos')
