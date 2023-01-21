@@ -9,10 +9,20 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0);
+  -webkit-transition: ease-in 500ms;
+  transition: ease-in 500ms;
 }
 body::-webkit-scrollbar-thumb {
   background-color: darkblue;
   border-radius: 15px;
+  -webkit-transition: ease 500ms;
+  transition: ease 500ms;
+}
+body::-webkit-scrollbar-thumb:active {
+  background-color: #ffffff;
+  -webkit-transition: ease 500ms;
+  transition: ease 500ms;
+  border: 2px solid darkblue;
 }
 
 code {

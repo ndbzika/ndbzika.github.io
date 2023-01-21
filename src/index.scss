@@ -12,13 +12,20 @@ body {
     
     &::-webkit-scrollbar-track {
         background: transparentize($color: #ffffff, $amount: 1);
+        transition: ease-in 500ms;
     }
     
     &::-webkit-scrollbar-thumb {
         background-color: darkblue; 
-        border-radius: 15px; 
+        border-radius: 15px;
+        transition: ease 500ms; 
+
+        &:active{
+            background-color: #ffffff;
+            transition: ease 500ms;
+            border: 2px solid darkblue;
+        }
     }
-    
 }
 
 code {

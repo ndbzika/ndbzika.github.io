@@ -1,17 +1,35 @@
 import { Avatar, Box, Container, Typography } from '@mui/material';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 import Header from '../components/Header';
 import Contacts from '../components/Contacts';
 import ProjectsSection from '../components/Projects';
+import { BackToTopButton } from '../components/BackToTopButton';
 
 import '../styles/Principal.css'
 import '../styles/bootstrap/bootstrap.css'
 
 
 export const Home = () => {
+
+    const aboutPos = useRef();
+
+    const [visible, setVisible] = useState(false);
+
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop
+        if(scrolled >= 380) {
+            setVisible(true)
+        } else if(scrolled < aboutPos.current.offsetTop){
+            setVisible(false)
+        }
+    }
+
+    window.addEventListener('scroll', toggleVisible);
+
     return (  
         <>
+        { visible ? <BackToTopButton style={{display: 'inline'}}/> : null }
         <section className='principal'>
             <Header /> 
             <Container sx={{ padding:10, display:'flex',gap:10, alignItems:'center'}}>
@@ -23,7 +41,7 @@ export const Home = () => {
             </Container>
         </section>
 
-        <section className='about-me-container' id='sobre-mim'>
+        <section className='about-me-container' id='sobre-mim' ref={aboutPos}>
             <Box maxWidth='xl' sx={{width:'100%', backgroundColor:'white'}}>
                 &nbsp;
                 <Typography variant='h2' component='div' textAlign='center' className='about-me-titulo' sx={{ fontWeight:'bold'}}>Quem é Flávio?</Typography>
