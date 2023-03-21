@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" color="default">
+    <AppBar position="static" sx={{ background: '#282828' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -45,7 +45,7 @@ const Header = () => {
           >
             Meu Portifólio
           </Typography>
-
+          {/* Mobile Menu inicio */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -104,28 +104,27 @@ const Header = () => {
             </Menu>
           </Box>
 
-          {/* //////////////////////////////// */}
+          {/* Mobile Menu fim */}
+
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <Button
-              sx={{ my: 2, color: 'blue', display: 'block' }}
+              sx={{ my: 2, color: 'white', display: 'block' }}
               href="#sobre-mim"
             >
               Sobre Mim
             </Button>
           </Box>
-
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <Button
-              sx={{ my: 2, color: 'blue', display: 'block' }}
+              sx={{ my: 2, color: 'white', display: 'block' }}
               href="#projetos"
             >
               Projetos
             </Button>
           </Box>
-
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <Button
-              sx={{ my: 2, color: 'blue', display: 'block' }}
+              sx={{ my: 2, color: 'white', display: 'block' }}
               href="#contatos"
             >
               Contatos
