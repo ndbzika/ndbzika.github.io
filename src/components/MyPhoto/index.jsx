@@ -5,7 +5,11 @@ export const MyPhoto = () => {
       <img
         src={Photo}
         alt="Flávio Henrique"
-        style={{ position: 'absolute', top: '19.9vw', left: '49vw' }}
+        style={{
+          position: 'absolute',
+          top: window.screen.height - 700,
+          left: '70.1%',
+        }}
       />
     </picture>
   );
