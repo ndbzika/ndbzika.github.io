@@ -12,7 +12,7 @@ export const WellcomeCard = () => {
         textAlign: 'center',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         borderRadius: 5,
-        width: 300,
+        width: 700,
         height: 250,
         padding: 5,
         position: 'relative',
