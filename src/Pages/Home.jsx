@@ -43,7 +43,7 @@ export const Home = () => {
         className="projetos-container"
         id="projetos"
         style={{
-          backgroundColor: '#0d214f',
+          backgroundColor: '#fff',
           height: '75vh',
           display: 'flex',
           flexDirection: 'column',
@@ -54,7 +54,7 @@ export const Home = () => {
         <Typography
           variant="h2"
           component="h2"
-          sx={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}
+          sx={{ color: '#0d0d0d', textAlign: 'center', fontWeight: 'bold' }}
         >
           Projetos
         </Typography>
