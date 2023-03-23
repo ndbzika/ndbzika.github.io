@@ -54,7 +54,12 @@ export const Home = () => {
         <PrincipalPage />
       </section>
 
-      <section className="about-me-container" id="sobre-mim" ref={aboutPos}>
+      <section
+        className="about-me-container"
+        id="sobre-mim"
+        ref={aboutPos}
+        style={{ background: '#0d0d0d' }}
+      >
         <AboutMe />
       </section>
 
@@ -91,6 +96,7 @@ export const Home = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          background: '#0d0d0d',
         }}
       >
         <Footer>
