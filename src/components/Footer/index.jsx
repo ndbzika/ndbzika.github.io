@@ -15,7 +15,7 @@ export const Footer = ({ children }) => {
       <Typography
         variant="h3"
         component="div"
-        sx={{ color: '#0d214f', fontWeight: 'bold', textAlign: 'center' }}
+        sx={{ color: '#fff', fontWeight: 'bold', textAlign: 'center' }}
       >
         Contatos
       </Typography>
