@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import React, { useRef, useState } from 'react';
 
 import Header from '../components/Header/Header';
@@ -9,6 +9,7 @@ import { BackToTopButton } from '../components/BackToTopButton/BackToTopButton';
 import '../styles/Principal.css';
 import { PrincipalPage } from '../components/PrincipalPage';
 import { AboutMe } from '../components/AboutMe';
+import { Footer } from '../components/Footer';
 
 export const Home = () => {
   const aboutPos = useRef();
@@ -24,18 +25,41 @@ export const Home = () => {
     }
   };
 
+  const spacingPrincipalPage = (windowHeight) => {
+    console.log(windowHeight);
+    if (windowHeight >= 1000) {
+      console.log('deu certo');
+      return windowHeight - 800;
+    } else if (windowHeight >= 600) {
+      return windowHeight - 700;
+    }
+  };
+
   window.addEventListener('scroll', toggleVisible);
 
   return (
     <>
       {visible ? <BackToTopButton style={{ display: 'inline' }} /> : null}
 
-      <section className="principal">
+      <section
+        className="principal"
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          flexDirection: 'column',
+          rowGap: spacingPrincipalPage(window.innerHeight),
+        }}
+      >
         <Header />
         <PrincipalPage />
       </section>
 
-      <section className="about-me-container" id="sobre-mim" ref={aboutPos}>
+      <section
+        className="about-me-container"
+        id="sobre-mim"
+        ref={aboutPos}
+        style={{ background: '#0d0d0d' }}
+      >
         <AboutMe />
       </section>
 
@@ -43,7 +67,7 @@ export const Home = () => {
         className="projetos-container"
         id="projetos"
         style={{
-          backgroundColor: '#0d214f',
+          backgroundColor: '#fff',
           height: '75vh',
           display: 'flex',
           flexDirection: 'column',
@@ -54,7 +78,7 @@ export const Home = () => {
         <Typography
           variant="h2"
           component="h2"
-          sx={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}
+          sx={{ color: '#0d0d0d', textAlign: 'center', fontWeight: 'bold' }}
         >
           Projetos
         </Typography>
@@ -72,35 +96,12 @@ export const Home = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          background: '#0d0d0d',
         }}
       >
-        <Container
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
-            justifyContent: 'center',
-          }}
-        >
-          <Typography
-            variant="h3"
-            component="div"
-            sx={{ color: '#0d214f', fontWeight: 'bold', textAlign: 'center' }}
-          >
-            Contatos
-          </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              gap: 5,
-              justifyContent: 'center',
-              padding: '30px',
-            }}
-          >
-            <Contacts />
-          </Box>
-        </Container>
+        <Footer>
+          <Contacts />
+        </Footer>
       </section>
     </>
   );

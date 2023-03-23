@@ -1,41 +1,47 @@
-import { Box, Link, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react';
 
-import { FaDiscord, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
-
+import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { Contact } from '../Contact';
 
 const Contacts = () => {
-    return (  
-        <>
-            <Box  sx={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center'}}>
-                <Link underline="none" color="black">
-                    <FaDiscord />
-                    <Typography variant='p' component='div'>Discord</Typography>
-                </Link>
-            </Box>
+  return (
+    <>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: 5,
+        }}
+      >
+        <Contact
+          icon={<FaLinkedin />}
+          link="https://www.linkedin.com/in/flaviohenriquedev/"
+          color="#0e76a8"
+        >
+          Linkedin
+        </Contact>
 
-            <Box>
-                <Link underline="none" color="black" href='https://www.linkedin.com/in/fl%C3%A1vio-marques-91307b242/'>
-                    <FaLinkedin/>
-                    <Typography variant='p' component='div'>Linkedin</Typography>
-                </Link>
-            </Box>
+        <Contact
+          icon={<FaGithub />}
+          link="https://github.com/ndbzika"
+          color="#282828"
+        >
+          GitHub
+        </Contact>
 
-            <Box>
-                <Link underline="none" color="black" href='https://github.com/ndbzika'>
-                    <FaGithub/>
-                    <Typography variant='p' component='div'>GitHub</Typography>
-                </Link>
-            </Box>
-
-            <Box>
-                <Link underline="none" color="black" href='https://twitter.com/IndexFhms'>
-                    <FaTwitter/>
-                    <Typography variant='p' component='div'>Twitter</Typography>
-                </Link>
-            </Box>
-        </>
-    );
-}
+        <Contact
+          icon={<FaTwitter />}
+          link="https://twitter.com/IndexFhms"
+          color="#0e76a8"
+        >
+          Twitter
+        </Contact>
+      </Box>
+    </>
+  );
+};
 
 export default Contacts;

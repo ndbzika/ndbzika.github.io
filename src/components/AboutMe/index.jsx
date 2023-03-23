@@ -6,7 +6,7 @@ export const AboutMe = () => {
       maxWidth="xl"
       sx={{
         minWidth: '60vw',
-        backgroundColor: 'white',
+        backgroundColor: '#282828',
         padding: '2.5rem',
         borderRadius: '5px',
       }}

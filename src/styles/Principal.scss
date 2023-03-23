@@ -1,25 +1,23 @@
 body {
-    background-color: deepskyblue;
+  .principal {
+    background-image: url('../images/background.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about-me-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
 
-    .principal {
-        background-image: url("../images/background-image.png");
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .about-me-titulo {
+      color: #fff;
     }
-    .about-me-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50vh;
-
-        .about-me-titulo {
-            color: #0d214f;
-        }
-        .about-me-texto {
-            color: #0d214f;
-            width: 800px;
-            margin: 0 auto;
-        }
+    .about-me-texto {
+      color: #fff;
+      width: 800px;
+      margin: 0 auto;
     }
+  }
 }

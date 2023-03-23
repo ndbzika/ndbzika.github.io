@@ -5,7 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 body::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.4rem;
 }
 body::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0);
@@ -13,7 +13,7 @@ body::-webkit-scrollbar-track {
   transition: ease-in 500ms;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: darkblue;
+  background-color: #282828;
   border-radius: 15px;
   -webkit-transition: ease 500ms;
   transition: ease 500ms;
@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb:active {
   background-color: #ffffff;
   -webkit-transition: ease 500ms;
   transition: ease 500ms;
-  border: 2px solid darkblue;
+  border: 2px solid #282828;
 }
 
 code {
