@@ -19,7 +19,12 @@ export const Repositories = () => {
   return repositories.map((repository) => {
     return (
       <Card
-        sx={{ minWidth: 350, maxHeight: 300, borderRadius: 3 }}
+        sx={{
+          minWidth: 350,
+          maxHeight: 300,
+          borderRadius: 3,
+          backgroundColor: '#282828',
+        }}
         key={repository.keys_url}
       >
         <a
@@ -33,7 +38,7 @@ export const Repositories = () => {
               component="img"
               height="100"
               image={repository.owner.avatar_url}
-              alt="calculadora"
+              alt="Github Photo"
             />
             <CardContent sx={{ backgroundColor: '#282828' }}>
               <Typography
