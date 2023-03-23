@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   &::-webkit-scrollbar {
-    width: 0.6rem;
+    width: 0.4rem;
   }
 
   &::-webkit-scrollbar-track {
@@ -16,14 +16,14 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: darkblue;
+    background-color: #282828;
     border-radius: 15px;
     transition: ease 500ms;
 
     &:active {
       background-color: #ffffff;
       transition: ease 500ms;
-      border: 2px solid darkblue;
+      border: 2px solid #282828;
     }
   }
 }
