@@ -8,11 +8,9 @@ export const PrincipalPage = () => {
   return (
     <Container
       sx={{
-        position: 'relative',
         display: 'flex',
-        alignItems: 'stretch',
-        justifyContent: 'flex-start',
-        top: '10vh',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
       }}
     >
       <motion.div

@@ -25,13 +25,31 @@ export const Home = () => {
     }
   };
 
+  const spacingPrincipalPage = (windowHeight) => {
+    console.log(windowHeight);
+    if (windowHeight >= 1000) {
+      console.log('deu certo');
+      return windowHeight - 800;
+    } else if (windowHeight >= 600) {
+      return windowHeight - 700;
+    }
+  };
+
   window.addEventListener('scroll', toggleVisible);
 
   return (
     <>
       {visible ? <BackToTopButton style={{ display: 'inline' }} /> : null}
 
-      <section className="principal">
+      <section
+        className="principal"
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          flexDirection: 'column',
+          rowGap: spacingPrincipalPage(window.innerHeight),
+        }}
+      >
         <Header />
         <PrincipalPage />
       </section>
