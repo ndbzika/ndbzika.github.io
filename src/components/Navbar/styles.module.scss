@@ -1,0 +1,20 @@
+@import '../../../styles/theme/index.scss';
+
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  gap: 800px;
+  margin-left: 113px;
+  margin-right: 113px
+}
+
+.links {
+  gap: 55px;
+}
+
+.icon {
+  color: $accent;
+  order: 1;
+  flex-grow: 0;
+}
