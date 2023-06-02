@@ -1,8 +1,8 @@
 import { Providers } from './providers'
 
 export const metadata = {
-  title: 'Portfólio',
-  description: 'Junior React Developer',
+  title: 'Porfólio',
+  description: 'React Developer',
 }
 
 export default function RootLayout({
@@ -11,11 +11,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-Br">
+    <html lang="pt-BR">
       <body>
         <Providers>
-            {children}
-          </Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )
