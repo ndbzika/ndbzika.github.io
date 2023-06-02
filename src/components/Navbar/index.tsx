@@ -9,7 +9,7 @@ import styles from './styles.module.scss'
 
 export const Navbar = () => {
   return (
-    <Box className={styles.container} h='75px'>
+    <Box className={styles.container} w='100%' h='75px'>
 
       <HStack className={styles.links}>
         <Link href='/#home' scroll={false}>Home</Link>
