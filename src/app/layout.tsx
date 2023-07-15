@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/Navbar'
 import { Providers } from './providers'
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         <Providers>
+          <Navbar/>
           {children}
         </Providers>
       </body>

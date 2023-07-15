@@ -20,8 +20,12 @@ export const Navbar = () => {
       </HStack>
 
       <HStack gap='35px'>
-        <BsGithub className={styles.icon} size='1.8em' />
-        <BsLinkedin className={styles.icon} size='1.8em' />
+        <Box as='a' target='_blank' href='https://github.com/ndbzika'>
+          <BsGithub className={styles.icon} size='1.8em'/>
+        </Box>
+        <Box as='a' target='_blank' href='https://www.linkedin.com/in/flaviohenriquedev/'>
+          <BsLinkedin className={styles.icon} size='1.8em'/>
+        </Box>
       </HStack>
 
 

@@ -1,0 +1,25 @@
+@import './fonts.scss';
+
+@mixin BigTitle() {
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 6rem;
+  line-height: 77%;
+}
+
+@mixin MediumTitle() {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 88px;
+}
+
+@mixin SubText() {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+}
