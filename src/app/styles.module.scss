@@ -94,11 +94,7 @@
         padding-top: 1rem;
       }
     }
-
-
-
   }
-
   aside {
     margin-top: 10%;
   }
@@ -120,6 +116,100 @@
 
     aside {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .homeSection {
+    max-width: 100vw;
+    div{
+      .aboutMe {
+        margin: 2rem 0 1rem 1rem;
+        font-size: 1.5rem;
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        h2 {
+          font-size: 4.5rem;
+        }
+      }
+      .techStack {
+        margin-top: 1rem;
+        left: 7rem;
+        summary {
+          font-size: 1.5rem;
+        }
+        div {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .homeSection {
+    div {
+      .aboutMe {
+        font-size: 1.25rem;
+        max-width: 90vw;
+        h2 {
+          font-size: 4rem;
+        }
+      }
+      .techStack {
+        left: 6rem;
+        summary {
+          font-size: 1.35rem;
+        }
+        div {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  .homeSection {
+    div {
+      .aboutMe {
+        font-size: 1.15rem;
+        max-width: 80vw;
+        h2 {
+          font-size: 3.5rem;
+        }
+      }
+      .techStack {
+        left: 4.5rem;
+        summary {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .homeSection {
+    div {
+      .aboutMe {
+        font-size: 1.15rem;
+        max-width: 80vw;
+        h2 {
+          font-size: 3rem;
+        }
+      }
+      .techStack {
+        left: 3.5rem;
+        summary {
+          font-size: 1.15rem;
+        }
+      }
     }
   }
 }

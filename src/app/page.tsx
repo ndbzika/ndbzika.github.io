@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex, Grid, Heading, Spacer, Text } from '@chakra-ui/react';
+import { Box, Grid, Heading, Spacer, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { Paper } from '@/components/Paper';
 
@@ -23,7 +23,10 @@ export default function Home() {
             <Spacer />
             <Box as='details' className={styles.techStack} open>
               <summary>Minhas tecnologias</summary>
-              <Grid as='div' templateColumns='repeat(4, 1fr)' gap={10}>
+              <Grid
+              as='div'
+              templateColumns={'repeat(4, 1fr)'}
+              gap={10}>
                 <Paper name='ReactJS' image='/react.svg' />
                 <Paper name='NextJS' image='/nextjs.svg' />
                 <Paper name='NodeJS' image='/node.svg' />
