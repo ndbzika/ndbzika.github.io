@@ -6,15 +6,10 @@ import Link from 'next/link'
 import { useRef } from 'react'
 
 import styles from './styles.module.scss'
+import { useNav } from './useNav'
 
 export const Navbar = () => {
-  const menuRef = useRef<HTMLDivElement>(null);
-  const navRef = useRef<HTMLDivElement>(null);
-
-  const handleOpenMenu = () => {
-    navRef.current?.classList.toggle(styles.open);
-  }
-
+  const { menuRef, navRef, handleOpenMenu } = useNav({styles: styles});
   return (
     <>
       <Box as='nav' className={styles.hamburger} ref={menuRef} onClick={handleOpenMenu}>
