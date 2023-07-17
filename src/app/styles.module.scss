@@ -103,3 +103,23 @@
     margin-top: 10%;
   }
 }
+
+
+@media (max-width: 1000px) {
+  .homeSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    div {
+      .aboutMe {
+        margin-top: 4rem;
+      }
+    }
+
+    aside {
+      display: none;
+    }
+  }
+}
