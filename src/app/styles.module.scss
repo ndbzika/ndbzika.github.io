@@ -1,5 +1,5 @@
-@import '../../styles/theme/index.scss';
-@import '../../styles/mixins.scss';
+@import "../../styles/theme/index.scss";
+@import "../../styles/mixins.scss";
 
 @keyframes open {
   0% {
@@ -12,12 +12,12 @@
 
 @keyframes spin {
   0% {
-      -webkit-transform: rotate(0deg);
-      transform:rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      -webkit-transform: rotate(360deg);
-      transform:rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -32,6 +32,7 @@
   margin: auto;
 
   div {
+    position: relative;
 
     .aboutMe {
       max-width: 37rem;
@@ -81,10 +82,10 @@
 
       &[open] {
         summary::after {
-          content: '-';
+          content: "-";
           animation: spin 500ms linear;
         }
-        summary ~ *{
+        summary ~ * {
           animation: open 0.3s ease-in-out;
         }
       }
@@ -100,6 +101,41 @@
   }
 }
 
+.projetosSection {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 25rem;
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    @include BigTitle();
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+    color: $accent;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    img {
+      aspect-ratio: 1/1;
+    }
+  }
+}
 
 @media (max-width: 1000px) {
   .homeSection {
@@ -123,7 +159,7 @@
 @media (max-width: 650px) {
   .homeSection {
     max-width: 100vw;
-    div{
+    div {
       .aboutMe {
         margin: 2rem 0 1rem 1rem;
         font-size: 1.5rem;
@@ -172,7 +208,6 @@
     }
   }
 }
-
 
 @media (max-width: 400px) {
   .homeSection {
