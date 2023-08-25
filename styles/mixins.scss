@@ -1,7 +1,7 @@
-@import './fonts.scss';
+@import "./fonts.scss";
 
 @mixin BigTitle() {
-  font-family: 'Exo', sans-serif;
+  font-family: "Exo", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 6rem;
@@ -9,7 +9,7 @@
 }
 
 @mixin MediumTitle() {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -17,9 +17,16 @@
 }
 
 @mixin SubText() {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
+}
+
+@mixin DisplayFlex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }

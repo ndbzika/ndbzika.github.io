@@ -1,16 +1,11 @@
-import { useRef } from 'react';
+import { useState } from "react";
 
-type useNavProps = {
-  styles: { readonly [key: string]: string; }
-}
-
-export const useNav = ({ styles }: useNavProps) => {
-  const menuRef = useRef<HTMLDivElement>(null);
-  const navRef = useRef<HTMLDivElement>(null);
+export const useNav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOpenMenu = () => {
-    navRef.current?.classList.toggle(styles.open);
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-  return { menuRef, navRef, handleOpenMenu }
-}
+  return { isMenuOpen, handleOpenMenu };
+};
