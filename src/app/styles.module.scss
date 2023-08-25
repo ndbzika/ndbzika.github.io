@@ -32,13 +32,12 @@
   margin: auto;
 
   div {
-    position: relative;
-
+    margin-top: 13rem;
     .aboutMe {
       max-width: 37rem;
       width: 100%;
       color: $text;
-      margin: -5rem 3rem 3rem 0;
+      margin: -5rem 3rem 0 0;
 
       h2 {
         @include BigTitle();
@@ -49,50 +48,27 @@
     }
 
     .techStack {
-      margin-top: 3rem;
-      position: absolute;
+      margin-top: 5rem;
+      max-width: 40rem;
+      width: 100%;
+      max-height: 20rem;
+      height: 100%;
 
-      summary {
-        width: 100%;
-        padding: 0.5rem 0;
-        position: relative;
-        cursor: pointer;
-        font-size: 1.25rem;
-        font-weight: 300;
-        list-style: none;
-        outline: 0;
-
-        &::-webkit-details-marker {
-          display: none;
-        }
-
-        &::after {
-          content: "+";
+      p {
+        font-size: 1.5rem;
+        color: $text;
+        @include DisplayFlex(flex-start, space-between);
+        gap: 1rem;
+        margin-bottom: 1rem;
+        span {
           color: $accent;
-          padding-left: 1rem;
-          font-size: 1.75rem;
-          line-height: 0;
-          margin-top: 0.75rem;
-          right: 0;
-          font-weight: 200;
-          transform-origin: center;
-          transition: 200ms linear;
         }
       }
-
-      &[open] {
-        summary::after {
-          content: "-";
-          animation: spin 500ms linear;
-        }
-        summary ~ * {
-          animation: open 0.3s ease-in-out;
-        }
-      }
-
       div {
-        margin: 0 0 1rem;
-        padding-top: 1rem;
+        @include DisplayFlex();
+        flex-wrap: wrap;
+        gap: 5rem;
+        margin: 0 auto;
       }
     }
   }
@@ -158,12 +134,6 @@
     align-items: center;
     margin: 0;
 
-    div {
-      .aboutMe {
-        margin-top: 4rem;
-      }
-    }
-
     aside {
       display: none;
     }
@@ -184,10 +154,9 @@
 
 @media (max-width: 650px) {
   .homeSection {
-    max-width: 100vw;
+    margin: 0 0 1rem 1rem;
     div {
       .aboutMe {
-        margin: 2rem 0 1rem 1rem;
         font-size: 1.5rem;
         max-width: 30rem;
         display: flex;
@@ -196,16 +165,6 @@
         text-align: left;
         h2 {
           font-size: 4.5rem;
-        }
-      }
-      .techStack {
-        margin-top: 1rem;
-        left: 7rem;
-        summary {
-          font-size: 1.5rem;
-        }
-        div {
-          grid-template-columns: repeat(3, 1fr);
         }
       }
     }
@@ -234,15 +193,6 @@
           font-size: 4rem;
         }
       }
-      .techStack {
-        left: 6rem;
-        summary {
-          font-size: 1.35rem;
-        }
-        div {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
     }
   }
 
@@ -269,12 +219,6 @@
           font-size: 3.5rem;
         }
       }
-      .techStack {
-        left: 4.5rem;
-        summary {
-          font-size: 1.25rem;
-        }
-      }
     }
   }
 }
@@ -287,12 +231,6 @@
         max-width: 80vw;
         h2 {
           font-size: 3rem;
-        }
-      }
-      .techStack {
-        left: 3.5rem;
-        summary {
-          font-size: 1.15rem;
         }
       }
     }
