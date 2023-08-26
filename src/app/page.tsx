@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Grid, Heading, Spacer, Text } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { Paper } from "@/components/Paper";
 import { motion } from "framer-motion";
@@ -31,7 +31,7 @@ export default function Home() {
           <Box as="div">
             <Text as="div" className={styles.aboutMe}>
               Olá, meu nome é Flávio
-              <Heading as="h2">WEB DEVELOPER</Heading>
+              <h2>WEB DEVELOPER</h2>
               Tenho 19 anos e sou acadêmico de Análise e Desenvolvimento de
               Sistemas. Há 8 meses atuo no setor comercial da empresa júnior
               Loopis, com Front-End e Product Designer.
