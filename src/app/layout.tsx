@@ -1,3 +1,5 @@
+import Providers from "./Providers";
+
 export const metadata = {
   title: "FHMS - Portfolio",
   description: "React Developer",
@@ -10,7 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
