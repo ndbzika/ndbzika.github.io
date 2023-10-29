@@ -1,10 +1,5 @@
-import { Navbar } from "@/components/Navbar";
-import { Providers } from "./providers";
-
-import "../../styles/global.scss";
-
 export const metadata = {
-  title: "Porfólio",
+  title: "FHMS - Portfolio",
   description: "React Developer",
 };
 
@@ -15,12 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>
-        <Providers>
-          <Navbar />
-          {children}
-        </Providers>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
