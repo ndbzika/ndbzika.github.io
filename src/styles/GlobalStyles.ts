@@ -3,22 +3,17 @@ import { createGlobalStyle } from "styled-components";
 const styled = { createGlobalStyle };
 
 const GlobalStyles = styled.createGlobalStyle`
-  html {
-    box-sizing: border-box;
-    background: #f5f4f0;
-    display: block;
-    height: 100%;
-    max-width: 640px;
-    margin: 0 auto;
+  * {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    background: #808080;
   }
 
   body {
-    background-color: #fafafa;
-    min-height: 100vh;
-    padding: 1rem;
-    margin-top: 0;
-    font-family: Verdana;
+    font-family: "Roboto", sans-serif;
   }
 `;
 
