@@ -118,6 +118,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/just-another-hand/-/just-another-hand-5.0.8.tgz#875b9e4873ab49fb8e86b1cfefca132a49c80ae9"
   integrity sha512-F8A8ydZ35BHyGSzr0sJeTLTtPWjRAAjVDax4ZwyIlmT6CU5WbN1e8w2jpCkdmAzb4wjVOBqozVArAZcXAP87RA==
 
+"@fontsource/rubik@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource/rubik/-/rubik-5.0.17.tgz#d5051c5d523492c9f6ab33a558f26fee4697ef1c"
+  integrity sha512-42yGtxnj9UFY+A6nWbSWtcPYX3PXPYYQi1xKMzLLjis4wRhZ9VZANfWMbRToGPW+lRZvuSesCJ4uB+J2EDFvzQ==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.10.tgz#5a3ffe32cc9306365fb3fd572596cd602d5e12d2"
