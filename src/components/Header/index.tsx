@@ -68,6 +68,9 @@ export const Header = () => {
         <IconButton onClick={(e) => handleShowSideMenu(e)}>
           {isMenuOpen ? <CloseIcon /> : <HamgurberIcon />}
         </IconButton>
+        <p>
+          {"<"}flaviohenriquedev{" />"}
+        </p>
         <SidebarWrapper isOpen={isMenuOpen}>
           {isMenuOpen && (
             <StyledMenu>

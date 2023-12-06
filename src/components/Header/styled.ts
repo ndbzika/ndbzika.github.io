@@ -13,6 +13,11 @@ export const Container = styled.header`
   padding: 3rem;
   height: 5rem;
   width: 100%;
+
+  @media (max-width: 768px) {
+    height: 3rem;
+    padding: 1rem;
+  }
 `;
 
 export const Links = styled.nav`

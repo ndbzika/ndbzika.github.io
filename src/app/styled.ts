@@ -287,7 +287,6 @@ export const PassionSection = styled.section`
   height: 100%;
   width: 100%;
   padding: 5rem 0;
-  background-color: ${({ theme }) => theme.colors.secondary};
 
   h2 {
     align-self: flex-start;
