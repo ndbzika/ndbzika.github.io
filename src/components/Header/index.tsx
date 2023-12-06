@@ -30,11 +30,15 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleGoToSection = (e: any) => {
+    setIsMenuOpen(false);
+  };
+
   return (
     (matches && (
       <Container>
         <Links>
-          <AnchorLink href="/">
+          <AnchorLink href="/#home">
             <Dash>//</Dash>Home
           </AnchorLink>
           <AnchorLink href="/#about">
@@ -67,19 +71,19 @@ export const Header = () => {
         <SidebarWrapper isOpen={isMenuOpen}>
           {isMenuOpen && (
             <StyledMenu>
-              <AnchorLink href="/">
+              <AnchorLink href="/#home" onClick={handleGoToSection}>
                 <Dash>//</Dash>Home
               </AnchorLink>
 
-              <AnchorLink href="/#about">
+              <AnchorLink href="/#about" onClick={handleGoToSection}>
                 <Dash>//</Dash>About
               </AnchorLink>
 
-              <AnchorLink href="/#passion">
+              <AnchorLink href="/#passion" onClick={handleGoToSection}>
                 <Dash>//</Dash>Passion
               </AnchorLink>
 
-              <AnchorLink href="/projects">
+              <AnchorLink href="/projects" onClick={handleGoToSection}>
                 <Dash>//</Dash>Projects
               </AnchorLink>
 

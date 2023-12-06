@@ -3,6 +3,8 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaBars, FaChevronLeft } from "react-icons/fa";
 
 export const Container = styled.header`
+  z-index: 10;
+  position: fixed;
   background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   justify-content: flex-end;
@@ -62,7 +64,7 @@ export const Linkedin = styled(FaLinkedin)`
 
 export const IconButton = styled.button`
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 2rem;
   display: flex;
   flex-direction: column;

@@ -37,7 +37,7 @@ export default function Home() {
     <>
       <Header />
       <Main>
-        <HomeSection>
+        <HomeSection id="home">
           <div>
             <span>
               <Image id="" src={ShakingHand} alt="Shaking hand" ref={handRef} />{" "}
