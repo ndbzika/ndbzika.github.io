@@ -133,12 +133,16 @@ export const AboutSection = styled.section`
   }
 `;
 
-export const Divider = styled.div`
+interface DividerProps {
+  color: string;
+}
+
+export const Divider = styled.div<DividerProps>`
   align-self: flex-start;
   max-width: 37.5rem;
   width: 100%;
   height: 1px;
-  background-color: ${({ theme }) => theme.colors.text};
+  background-color: ${({ color, theme }) => theme.colors[color]};
   margin-bottom: 1rem;
   margin-left: 10%;
 
@@ -268,6 +272,142 @@ export const Card = styled.div`
     @media (max-width: 500px) {
       width: 15rem;
       height: 15rem;
+    }
+  }
+`;
+//////////////
+
+export const PassionSection = styled.section`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  padding: 5rem 0;
+  background-color: ${({ theme }) => theme.colors.secondary};
+
+  h2 {
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: left;
+    line-height: 95%;
+    margin-left: 10%;
+    color: ${({ theme }) => theme.colors.background};
+  }
+
+  @media (max-width: 900px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+`;
+
+export const PassionCardContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  margin-top: 5rem;
+
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
+`;
+
+export const PassionCard = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  background-color: ${({ theme }) => theme.colors.background};
+  max-width: 25rem;
+  width: 100%;
+  max-height: 38rem;
+  padding: 3.2rem;
+  height: 100%;
+  border-radius: 0.9rem;
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 130%;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 130%;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+  }
+
+  @media (max-width: 1050px) {
+    max-height: 100%;
+    height: 40rem;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+    max-width: 20rem;
+    height: 100%;
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    img {
+      width: 6.3rem;
+      height: 6.3rem;
+    }
+    max-width: 20rem;
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    max-width: 15rem;
+    h3 {
+      font-size: 0.9rem;
+    }
+
+    p {
+      font-size: 0.8rem;
     }
   }
 `;
