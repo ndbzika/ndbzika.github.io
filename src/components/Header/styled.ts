@@ -125,6 +125,7 @@ export const SidebarWrapper = styled.div<SidebarProps>`
   top: 0;
   left: 0;
   transition: 0.3s;
+  z-index: 9;
   transform: ${({ isOpen }) =>
     isOpen ? "translateX(0)" : "translateX(-100%)"};
 `;
