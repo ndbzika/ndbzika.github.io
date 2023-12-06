@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/jura": "^5.0.17",
     "@fontsource/just-another-hand": "^5.0.8",
+    "@fontsource/kodchasan": "^5.0.17",
     "@fontsource/rubik": "^5.0.17",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",

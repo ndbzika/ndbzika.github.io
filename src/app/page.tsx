@@ -7,14 +7,16 @@ import gsap, { SteppedEase } from "gsap";
 import {
   AboutSection,
   Card,
+  ContactSection,
   Divider,
   HomeSection,
   Main,
   PassionCard,
   PassionCardContainer,
   PassionSection,
+  SendButton,
   TechStack,
-} from "./styled";
+} from "../styles/HomeStyled";
 
 import ShakingHand from "../../public/ShakingHand.svg";
 import ReactImg from "../../public/react.svg";
@@ -24,6 +26,7 @@ import NodeImg from "../../public/node.svg";
 import FlavioImg from "../../public/flavio.png";
 import BulbImg from "../../public/bulb.svg";
 import CodeImg from "../../public/code.svg";
+import SendImg from "../../public/send.svg";
 
 export default function Home() {
   const handRef = useRef(null);
@@ -111,6 +114,17 @@ export default function Home() {
             </PassionCard>
           </PassionCardContainer>
         </PassionSection>
+
+        <ContactSection id="contact">
+          <h3>
+            Whether you have an idea for a project or just want to chat, feel
+            free to shoot me an email!
+          </h3>
+          <SendButton href="mailto:flaviohenriquefc@gmail.com">
+            Say Hello
+            <Image src={SendImg} alt="Paper Airplane" />
+          </SendButton>
+        </ContactSection>
       </Main>
       <footer>
         <p>

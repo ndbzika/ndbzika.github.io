@@ -118,6 +118,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/just-another-hand/-/just-another-hand-5.0.8.tgz#875b9e4873ab49fb8e86b1cfefca132a49c80ae9"
   integrity sha512-F8A8ydZ35BHyGSzr0sJeTLTtPWjRAAjVDax4ZwyIlmT6CU5WbN1e8w2jpCkdmAzb4wjVOBqozVArAZcXAP87RA==
 
+"@fontsource/kodchasan@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource/kodchasan/-/kodchasan-5.0.17.tgz#5b1d8391dccd2b308c0bedb0fde80e342e769b4a"
+  integrity sha512-1fA1wKNlZkh+fgAvTziJ5+DSKBqLoYWhxX+adAg613jOV4F9FfzZ+FXP3hc842GdBeT1Ye4AlWICNBFUFmWd3g==
+
 "@fontsource/rubik@^5.0.17":
   version "5.0.17"
   resolved "https://registry.yarnpkg.com/@fontsource/rubik/-/rubik-5.0.17.tgz#d5051c5d523492c9f6ab33a558f26fee4697ef1c"

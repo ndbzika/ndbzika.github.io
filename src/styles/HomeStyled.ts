@@ -410,3 +410,125 @@ export const PassionCard = styled.div`
     }
   }
 `;
+
+////////////////////
+
+export const ContactSection = styled.section`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5.7rem;
+  margin: 0 auto;
+  height: 100%;
+  padding: 5rem;
+  width: 100%;
+
+  h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: left;
+    line-height: auto;
+    max-width: 33rem;
+    color: ${({ theme }) => theme.colors.background};
+    font-family: ${({ theme }) => theme.fonts.kodchasan};
+  }
+
+  @media (max-width: 900px) {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 600px) {
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    gap: 3rem;
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+`;
+
+export const SendButton = styled.a`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.colors.background};
+  width: 100%;
+  max-width: 20rem;
+  height: 4rem;
+  border-radius: 15px;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: -20px 20px 2px 0px #e3bff8;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 8px solid ${({ theme }) => theme.colors.primary};
+  font-family: ${({ theme }) => theme.fonts.kodchasan};
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+
+  @media (max-width: 900px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 15rem;
+  }
+
+  img {
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    margin: 0 -2rem;
+  }
+
+  @media (max-width: 1000px) {
+    img {
+      margin: 0 -4rem;
+    }
+  }
+
+  @media (max-width: 850px) {
+    img {
+      margin: 0 -3.2rem;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  @media (max-width: 750px) {
+    img {
+      top: -0.5rem;
+      margin: 0 -2.5rem;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+`;

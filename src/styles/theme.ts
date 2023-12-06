@@ -1,3 +1,5 @@
+import fonts from "./fonts";
+
 const theme = {
   colors: {
     primary: "#5A1084",
@@ -5,6 +7,9 @@ const theme = {
     background: "#FDFAFE",
     text: "#0C0212",
     accent: "#A100FF",
+  },
+  fonts: {
+    ...fonts,
   },
 };
 
