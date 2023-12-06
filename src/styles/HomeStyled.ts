@@ -6,6 +6,7 @@ export const Main = styled.main`
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow-x: hidden;
 `;
 
 export const HomeSection = styled.section`
@@ -14,7 +15,7 @@ export const HomeSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 
   span {

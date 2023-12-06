@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/Header";
 import Image from "next/image";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap, { SteppedEase } from "gsap";
 import {
   AboutSection,
@@ -17,6 +17,7 @@ import {
   SendButton,
   TechStack,
 } from "../styles/HomeStyled";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ShakingHand from "../../public/ShakingHand.svg";
 import ReactImg from "../../public/react.svg";
@@ -28,10 +29,15 @@ import BulbImg from "../../public/bulb.svg";
 import CodeImg from "../../public/code.svg";
 import SendImg from "../../public/send.svg";
 
-export default function Home() {
-  const handRef = useRef(null);
+import theme from "@/styles/theme";
 
-  useLayoutEffect(() => {
+export default function Home() {
+  const [currentBg, setCurrentBg] = useState(theme.colors.background);
+  let mainRef = useRef(null);
+  const handRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
     gsap.to(handRef.current, {
       rotation: 20,
       yoyo: true,
@@ -41,10 +47,62 @@ export default function Home() {
     });
   }, []);
 
+  useEffect(() => {
+    gsap.to(mainRef.current, {
+      background: currentBg,
+      duration: 1,
+    });
+  }, [currentBg]);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#home",
+        start: "top 90%",
+        end: "bottom 30%",
+        onEnter: () => setCurrentBg(theme.colors.background),
+        onLeave: () =>
+          setCurrentBg(
+            `linear-gradient(to top, ${theme.colors.primary} 40%, ${theme.colors.background} 60%)`
+          ),
+      },
+    });
+  });
+
+  useEffect(() => {
+    gsap.from("#home", {
+      scale: 0.5,
+      opacity: 0,
+      duration: 0.5,
+      delay: 0.5,
+      scrollTrigger: "#home",
+    });
+    gsap.from("#about", {
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+      scrollTrigger: "#about",
+    });
+
+    gsap.from("#passion", {
+      opacity: 0,
+      duration: 1,
+      delay: 0.7,
+      scrollTrigger: "#passion",
+    });
+
+    gsap.from("#contact", {
+      opacity: 0,
+      duration: 1,
+      delay: 0.7,
+      scrollTrigger: "#contact",
+    });
+  }, []);
+
   return (
     <>
       <Header />
-      <Main>
+      <Main ref={mainRef}>
         <HomeSection id="home">
           <div>
             <span>
