@@ -3,7 +3,7 @@
 import { Header } from "@/components/Header";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import gsap, { SteppedEase } from "gsap";
+import gsap from "gsap";
 import {
   AboutSection,
   Card,
@@ -11,18 +11,11 @@ import {
   Divider,
   HomeSection,
   Main,
-  PassionCard,
-  PassionCardContainer,
-  PassionSection,
   SendButton,
 } from "../styles/HomeStyled";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ShakingHand from "../../public/ShakingHand.svg";
-import FlavioImg from "../../public/flavio.png";
-import BulbImg from "../../public/bulb.svg";
-import CodeImg from "../../public/code.svg";
-import SendImg from "../../public/send.svg";
 
 import theme from "@/styles/theme";
 
@@ -129,35 +122,6 @@ export default function Home() {
           </Card>
         </AboutSection>
 
-        <PassionSection id="passion">
-          <h2>What I do</h2>
-          <Divider color="background" />
-          <PassionCardContainer>
-            <PassionCard>
-              <Image src={BulbImg} alt="Bulb" />
-              <h3>Design</h3>
-              <p>
-                Design isn&apos;t just what a product looks like and feels like
-                on the outside. Design encompasses the internal functionality of
-                a product as well as the overall user experience. I strive to
-                design interfaces and experiences that people can enjoy on all
-                digital mediums.
-              </p>
-            </PassionCard>
-            <PassionCard>
-              <Image src={CodeImg} alt="Code tags" />
-              <h3>Development</h3>
-              <p>
-                With a strong foundation in computer science, I&apos;m
-                passionate about web design and development, and interested in
-                mobile app development. As I grow as a developer, I hope to
-                write clean, readable code that can be used by others and
-                leveraged to create beautiful software.
-              </p>
-            </PassionCard>
-          </PassionCardContainer>
-        </PassionSection>
-
         <ContactSection id="contact">
           <h3>
             Whether you have an idea for a project or just want to chat, feel
@@ -168,11 +132,6 @@ export default function Home() {
           </SendButton>
         </ContactSection>
       </Main>
-      <footer>
-        <p>
-          Made with <span>♥</span> by Flávio Henrique
-        </p>
-      </footer>
     </>
   );
 }
