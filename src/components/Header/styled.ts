@@ -44,7 +44,7 @@ export const AnchorLink = styled(Link)`
 `;
 
 export const Dash = styled.span`
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.accent};
   font-size: 1.1rem;
   padding: 0.5rem;
 `;

@@ -2,11 +2,11 @@ import fonts from "./fonts";
 
 const theme = {
   colors: {
-    primary: "#5A1084",
-    secondary: "#E3BFF8",
-    background: "#FDFAFE",
-    text: "#0C0212",
-    accent: "#A100FF",
+    primary: "#F8FCFE",
+    secondary: "#AA80EA",
+    background: "#2890DC",
+    text: "#FFFFFF",
+    accent: "#FCEA2B",
   },
   fonts: {
     ...fonts,

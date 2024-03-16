@@ -13,8 +13,9 @@ export const HomeSection = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-left: 10%;
   height: 100vh;
   width: 100%;
 
@@ -30,12 +31,7 @@ export const HomeSection = styled.section`
     width: 48rem;
     text-align: left;
     line-height: 85%;
-
-    span {
-      color: ${({ theme }) => theme.colors.secondary};
-      font-size: 8rem;
-      font-family: "Jura", sans-serif;
-    }
+    color: ${({ theme }) => theme.colors.text};
   }
 
   @media (max-width: 900px) {
@@ -44,10 +40,6 @@ export const HomeSection = styled.section`
       width: 30rem;
       text-align: left;
       line-height: 85%;
-
-      span {
-        font-size: 5rem;
-      }
     }
 
     span {
@@ -61,35 +53,6 @@ export const HomeSection = styled.section`
       width: 20rem;
       text-align: left;
       line-height: 85%;
-
-      span {
-        font-size: 3rem;
-      }
-    }
-
-    span {
-      font-size: 1.5rem;
-    }
-  }
-`;
-
-export const TechStack = styled.span`
-  padding: 0 0.5rem;
-  img {
-    margin: 0 0.2rem;
-  }
-
-  @media (max-width: 900px) {
-    img {
-      width: 3.6rem;
-      height: 3.6rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
     }
   }
 `;

@@ -15,15 +15,10 @@ import {
   PassionCardContainer,
   PassionSection,
   SendButton,
-  TechStack,
 } from "../styles/HomeStyled";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ShakingHand from "../../public/ShakingHand.svg";
-import ReactImg from "../../public/react.svg";
-import JavaScriptImg from "../../public/javascript.svg";
-import TypeScriptImg from "../../public/typescript.svg";
-import NodeImg from "../../public/node.svg";
 import FlavioImg from "../../public/flavio.png";
 import BulbImg from "../../public/bulb.svg";
 import CodeImg from "../../public/code.svg";
@@ -55,15 +50,14 @@ export default function Home() {
   }, [currentBg]);
 
   useEffect(() => {
-    const tl = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
         trigger: "#home",
         start: "top 90%",
         end: "bottom 30%",
-        onEnter: () => setCurrentBg(theme.colors.background),
         onLeave: () =>
           setCurrentBg(
-            `linear-gradient(to top, ${theme.colors.primary} 40%, ${theme.colors.background} 60%)`
+            `linear-gradient(to top, #000000 30%, ${theme.colors.background} 70%)`
           ),
       },
     });
@@ -110,14 +104,7 @@ export default function Home() {
               Hi, I&apos;m Flávio
             </span>
             <h1>
-              FULLSTACK WEB
-              <TechStack>
-                <Image src={JavaScriptImg} alt="JavaScript" />
-                <Image src={TypeScriptImg} alt="TypeScript" />
-                <Image src={ReactImg} alt="React" />
-                <Image src={NodeImg} alt="Node" />
-              </TechStack>{" "}
-              DEVELOPER <span>&</span> DESIGNER
+              FULLSTACK DEVELOPER
             </h1>
           </div>
         </HomeSection>
