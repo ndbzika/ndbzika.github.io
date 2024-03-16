@@ -165,7 +165,6 @@ export default function Home() {
           </h3>
           <SendButton href="mailto:flaviohenriquefc@gmail.com">
             Say Hello
-            <Image src={SendImg} alt="Paper Airplane" />
           </SendButton>
         </ContactSection>
       </Main>

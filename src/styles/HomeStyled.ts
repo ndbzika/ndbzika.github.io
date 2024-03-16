@@ -398,7 +398,7 @@ export const ContactSection = styled.section`
     text-align: left;
     line-height: auto;
     max-width: 33rem;
-    color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.primary};
     font-family: ${({ theme }) => theme.fonts.kodchasan};
   }
 
@@ -440,7 +440,7 @@ export const SendButton = styled.a`
   margin-top: 2rem;
   cursor: pointer;
   transition: 0.2s;
-  box-shadow: -20px 20px 2px 0px #e3bff8;
+  box-shadow: -20px 20px 2px 0px ${({ theme }) => theme.colors.background};
   font-size: 2rem;
   font-weight: bold;
   border: 8px solid ${({ theme }) => theme.colors.primary};
@@ -468,35 +468,5 @@ export const SendButton = styled.a`
 
   @media (max-width: 600px) {
     max-width: 15rem;
-  }
-
-  img {
-    position: absolute;
-    top: -1rem;
-    right: 0;
-    margin: 0 -2rem;
-  }
-
-  @media (max-width: 1000px) {
-    img {
-      margin: 0 -4rem;
-    }
-  }
-
-  @media (max-width: 850px) {
-    img {
-      margin: 0 -3.2rem;
-      width: 5rem;
-      height: 5rem;
-    }
-  }
-
-  @media (max-width: 750px) {
-    img {
-      top: -0.5rem;
-      margin: 0 -2.5rem;
-      width: 4rem;
-      height: 4rem;
-    }
   }
 `;
