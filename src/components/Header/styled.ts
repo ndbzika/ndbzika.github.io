@@ -14,6 +14,11 @@ export const Container = styled.header`
   height: 5rem;
   width: 100%;
 
+  p {
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 1.2rem;
+  }
+
   @media (max-width: 768px) {
     height: 3rem;
     padding: 1rem;
