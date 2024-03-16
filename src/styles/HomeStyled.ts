@@ -70,12 +70,14 @@ export const AboutSection = styled.section`
   width: 100%;
 
   h2 {
+    color: ${({ theme }) => theme.colors.primary};
     align-self: flex-start;
     font-weight: bold;
     font-size: 4rem;
     text-align: left;
     line-height: 95%;
     margin-left: 10%;
+    margin-bottom: .5rem;
   }
 
   @media (max-width: 900px) {
@@ -132,11 +134,12 @@ export const Card = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: transparent;
   width: 80%;
   max-height: 24rem;
   padding: 3.2rem;
   height: 100%;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
   border-radius: 0.9rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
@@ -145,7 +148,7 @@ export const Card = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 46.2rem;
+    width: 100%;
     gap: 1.7rem;
 
     p {
@@ -153,6 +156,7 @@ export const Card = styled.div`
       line-height: 130%;
       text-align: justify;
       font-family: "Rubik", sans-serif;
+      color: ${({ theme }) => theme.colors.text};
     }
   }
   @media (max-width: 1350px) {

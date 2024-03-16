@@ -115,19 +115,17 @@ export default function Home() {
           <Card>
             <div>
               <p>
-                I&apos;m 19 years old and studying Systems Analysis and
-                Development. I&apos;ve been working in the commercial sector of
-                the junior company Loopis for 11 months, mainly with Front-End
-                and UX/UI.
+                I&apos;m 19 years old and I&apos;m studying Systems Analysis and Development.
+                I&apos;m currently working on a voluntary basis at the junior company
+                Loopis Jr, as Project Director.
               </p>
               <p>
-                I&apos;m a creative developer specializing in crafting
-                delightful web experiences. I can provide guidance to your
-                company on various aspects of the web platform, including
-                performance optimization and creative user interactions.
+                I&apos;m a creative programmer who specializes in creating enjoyable
+                web experiences. I work across front-end, back-end, devops and
+                database. I also have a fondness for information security, which
+                is my hobby in addition to Brazilian jiu-jitsu.
               </p>
             </div>
-            <Image src={FlavioImg} alt="Flávio Henrique" />
           </Card>
         </AboutSection>
 
