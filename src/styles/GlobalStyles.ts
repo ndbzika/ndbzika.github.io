@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import "@fontsource/jura";
+import theme from "./theme";
+import fonts from "./fonts";
 
 const styled = { createGlobalStyle };
 
@@ -9,11 +12,25 @@ const GlobalStyles = styled.createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    background: #808080;
+    background: ${theme.colors.background};
   }
 
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: ${fonts.jura};
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${theme.colors.text};
+  }
+
+  ul {
+    list-style: none;
   }
 `;
 
