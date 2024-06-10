@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import "@fontsource/jura";
-import theme from "./theme";
 import fonts from "./fonts";
+import theme from "./theme";
 
 const styled = { createGlobalStyle };
 
@@ -15,13 +14,31 @@ const GlobalStyles = styled.createGlobalStyle`
     background: ${theme.colors.background};
   }
 
-  body {
-    font-family: ${fonts.jura};
+  @media (max-width: 760px) {
+    html {
+      background: ${theme.colors.primary};
+    }
   }
+
+  body {
+    font-family: ${fonts.raleway};
+    color: ${theme.colors.text};
+  }
+
+  h1, p {
+    font-family: ${fonts.raleway};
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: ${fonts.titilliumWeb};
+  }
+
 
   a,
   button {
     cursor: pointer;
+    border: none;
+    outline: none;
   }
 
   a {

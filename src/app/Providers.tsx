@@ -1,12 +1,11 @@
 "use client";
 
 import StyledComponentsRegistry from "@/lib/registry";
-import { ThemeProvider } from "styled-components";
-import theme from "@/styles/theme";
 import GlobalStyles from "@/styles/GlobalStyles";
-import { ReactNode } from "react";
+import theme from "@/styles/theme";
+import { ThemeProvider } from "styled-components";
 
-const Providers = ({ children }: { children: ReactNode }) => {
+const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <StyledComponentsRegistry>
       <GlobalStyles />
