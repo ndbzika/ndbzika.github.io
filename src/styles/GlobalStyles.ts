@@ -23,13 +23,18 @@ const GlobalStyles = styled.createGlobalStyle`
   body {
     font-family: ${fonts.raleway};
     color: ${theme.colors.text};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
   }
 
   h1, p {
     font-family: ${fonts.raleway};
   }
 
-  h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6, li {
     font-family: ${fonts.titilliumWeb};
   }
 

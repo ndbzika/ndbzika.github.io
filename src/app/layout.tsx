@@ -1,9 +1,8 @@
-import { Header } from '@/components/Header';
 import { Metadata } from "next";
 import Providers from "./Providers";
 
 export const metadata: Metadata = {
-  title: "FHMS - Portfolio",
+  title: "FHMS",
   description: "Desenvolvedor Web Full Stack",
   keywords: "React, Desenvolvedor, JavaScript, TypeScript, Web, Full Stack, Frontend, Backend, Node, Next, React Native, Mobile, WebApp, PWA, Portfolio, FHMS, Flavio, Henrique, Marques, Sousa",
   icons: [
@@ -20,7 +19,6 @@ export default function RootLayout({
     <html lang="pt-BR">
       <Providers>
         <body>
-          <Header />
           {children}
         </body>
       </Providers>
