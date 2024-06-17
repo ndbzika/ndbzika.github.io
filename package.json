@@ -11,10 +11,9 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@fontsource/jura": "^5.0.17",
-    "@fontsource/just-another-hand": "^5.0.8",
-    "@fontsource/kodchasan": "^5.0.17",
-    "@fontsource/rubik": "^5.0.17",
+    "@fontsource/raleway": "^5.0.19",
+    "@fontsource/titillium-web": "^5.0.20",
+    "@gsap/react": "^2.1.1",
     "@mui/material": "^5.14.20",
     "@types/node": "^20.11.28",
     "@types/react": "18.2.8",

@@ -1,13 +1,9 @@
-import "@fontsource/jura";
-import "@fontsource/just-another-hand";
-import "@fontsource/rubik";
-import "@fontsource/kodchasan";
+import '@fontsource/raleway';
+import '@fontsource/titillium-web';
 
 const fonts = {
-  jura: "'Jura', sans-serif",
-  justAnotherHand: "'Just Another Hand', cursive",
-  rubik: "'Rubik', sans-serif",
-  kodchasan: "'Kodchasan', sans-serif",
+  raleway: "'Raleway', sans-serif",
+  titilliumWeb: "'Titillium Web', sans-serif",
 };
 
 export default fonts;
