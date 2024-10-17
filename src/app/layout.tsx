@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Script from "next/script";
 import Providers from "./Providers";
 
 export const metadata: Metadata = {
@@ -18,9 +19,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <Providers>
-        <body>
-          {children}
-        </body>
+        <>
+          <body>
+            {children}
+          </body>
+          <Script src="https://scripts.simpleanalyticscdn.com/latest.js"  />
+        </>
       </Providers>
     </html>
   );
